@@ -3,72 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SILOMAT | Jugando Nivel 1</title>
+    <title>SILOMAT | Speed Logic</title>
     <link rel="stylesheet" href="gameone.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- CODIGO DE JUEGO -->
 
     <div id="game-bg"></div>
 
     <header class="hud">
-        <div class="hud-item">
-            <span class="label">PREGUNTA</span>
-            <span class="value" id="question-counter">1 / 5</span>
+        <div class="hud-group">
+            <span class="hud-label">PREGUNTA</span>
+            <span class="hud-value" id="question-counter">01 / 15</span>
         </div>
         
-        <div class="hud-item timer-container">
-            <div class="timer-bar">
+        <div class="timer-wrapper">
+            <div class="timer-track">
                 <div class="timer-fill" id="timer-fill"></div>
             </div>
-            <span class="time-text" id="time-text">10s</span>
+            <span class="timer-text" id="time-text">10s</span>
         </div>
 
-        <div class="hud-item">
-            <span class="label">PUNTAJE</span>
-            <span class="value" id="score-display">0</span>
+        <div class="hud-group right">
+            <span class="hud-label">PUNTAJE</span>
+            <span class="hud-value" id="score-display">0</span>
         </div>
     </header>
 
     <main class="game-area">
         
-        <div class="question-card" id="question-card">
-            <div class="category-tag">FUNDAMENTOS</div>
-            <h2 class="question-text" id="question-text">
-                Cargando pregunta...
-            </h2>
+        <div class="card-container">
+            <div class="question-card" id="question-card">
+                <div class="card-header">
+                    <span class="category-badge">RAZONAMIENTO LÓGICO</span>
+                </div>
+                <h2 class="question-text" id="question-text">
+                    Cargando...
+                </h2>
+            </div>
         </div>
 
-        <div class="answers-grid">
-            <button class="btn-answer true-btn" onclick="selectAnswer(true)">
-                VERDADERO
+        <div class="actions-grid">
+            <button class="btn-option true-option" onclick="selectAnswer(true)">
+                <span class="btn-icon">VERDADERO</span>
             </button>
-            <button class="btn-answer false-btn" onclick="selectAnswer(false)">
-                FALSO
+            <button class="btn-option false-option" onclick="selectAnswer(false)">
+                <span class="btn-icon">FALSO</span>
             </button>
-        </div>
-
-        <div id="feedback-overlay" class="feedback-hidden">
-            <span id="feedback-icon">✅</span>
-            <span id="feedback-text">¡CORRECTO!</span>
         </div>
 
     </main>
 
+    <div id="feedback-overlay" class="feedback-hidden">
+        <div class="feedback-content">
+            <div class="feedback-icon-box" id="feedback-icon-box">
+                </div>
+            <h2 id="feedback-title">¡CORRECTO!</h2>
+            <p id="feedback-explanation">
+                Aquí va la explicación educativa del por qué la respuesta es correcta o incorrecta.
+            </p>
+            <button class="btn-next" onclick="nextQuestion()">CONTINUAR →</button>
+        </div>
+    </div>
+
     <section id="results-screen" class="hidden">
-        <div class="results-content">
-            <h1 class="results-title">MÓDULO COMPLETADO</h1>
+        <div class="results-modal">
+            <div class="results-header">
+                <span class="results-subtitle">MÓDULO FINALIZADO</span>
+                <h1 class="results-title">RESULTADOS</h1>
+            </div>
             
-            <div class="score-box">
-                <span class="final-score-label">PUNTAJE FINAL</span>
+            <div class="score-circle">
+                <span class="score-label">PUNTAJE</span>
                 <span class="final-score-value" id="final-score">0</span>
-                <p class="final-message" id="final-message">Buen trabajo</p>
             </div>
 
-            <div class="action-buttons">
-                <button onclick="location.reload()" class="restart-btn">REINTENTAR</button>
-                <a href="menu.html" class="menu-btn">VOLVER AL MENÚ</a>
+            <p class="final-message" id="final-message">Evaluando rendimiento...</p>
+
+            <div class="results-actions">
+                <button onclick="location.reload()" class="btn-restart">REINTENTAR</button>
+                <a href="menu.html" class="btn-menu">MENÚ PRINCIPAL</a>
             </div>
         </div>
     </section>
