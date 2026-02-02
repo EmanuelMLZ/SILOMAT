@@ -3,121 +3,121 @@
 */
 
 const questionsDB = [
-    { instruction: "Indique el tipo de falacia presente.", text: "Si estudio, apruebo. Aprobé. Entonces estudié.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Si estudio, apruebo. Aprobé. Entonces estudié.", options: [
         "Falacia formal (afirmación del consecuente)",
         "Falacia informal (apelación a la mayoría)",
         "Silogismo válido",
         "Generalización apresurada"
     ], answer: 0, explanation: "Afirmación del consecuente: concluir el antecedente por haber obtenido el consecuente es inválido." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Dos médicos se equivocaron, entonces todos los médicos son incompetentes.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Dos médicos se equivocaron, entonces todos los médicos son incompetentes.", options: [
         "Falacia formal",
         "Generalización apresurada",
         "Silogismo categórico",
         "Apelación a la autoridad"
     ], answer: 1, explanation: "Generalización apresurada: sacar una conclusión general a partir de pocos casos." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Todo el mundo lo usa, así que es bueno.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Todo el mundo lo usa, así que es bueno.", options: [
         "Apelación a la mayoría",
         "Falacia formal",
         "Silogismo hipotético",
         "Lenguaje ambiguo"
     ], answer: 0, explanation: "Apelación a la mayoría: usar la popularidad como evidencia de validez." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Si llueve, la calle se moja. No llueve. Entonces la calle no se moja.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Si llueve, la calle se moja. No llueve. Entonces la calle no se moja.", options: [
         "Falacia formal (negación del antecedente)",
         "Silogismo válido",
         "Falacia informal",
         "Apelación a la emoción"
     ], answer: 0, explanation: "Negación del antecedente: la ausencia de lluvia no garantiza que la calle esté seca." },
-    { instruction: "Indique si el razonamiento es un silogismo válido o inválido.", text: "Todos los gatos son animales. Todos los perros son animales. Por lo tanto, todos los perros son gatos.", options: [
+    { instruction: "Determina si el razonamiento es un silogismo válido o inválido.", text: "Todos los gatos son animales. Todos los perros son animales. Por lo tanto, todos los perros son gatos.", options: [
         "Silogismo inválido",
         "Silogismo categórico válido",
         "Falacia informal",
         "Apelación a la tradición"
     ], answer: 0, explanation: "Conclusión inválida: compartir una característica no implica identidad entre categorías." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Si no entregas el trabajo hoy, nunca serás profesional.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Si no entregas el trabajo hoy, nunca serás profesional.", options: [
         "Falacia de falsa causa",
         "Apelación al miedo",
         "Silogismo disyuntivo",
         "Generalización apresurada"
     ], answer: 1, explanation: "Apelación al miedo: amenazar consecuencias exageradas para forzar una acción." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Todos los hombres son mortales. Ninguna mujer es un hombre. Por lo tanto, ninguna mujer es mortal.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Todos los hombres son mortales. Ninguna mujer es un hombre. Por lo tanto, ninguna mujer es mortal.", options: [
         "Falacia formal",
         "Silogismo válido",
         "Apelación a la ignorancia",
         "Lenguaje ambiguo"
     ], answer: 0, explanation: "Error formal en la estructura que lleva a una conclusión falsa." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Si no compras este producto, tu vida será un fracaso.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Si no compras este producto, tu vida será un fracaso.", options: [
         "Apelación a la emoción (miedo)",
         "Silogismo hipotético válido",
         "Generalización apresurada",
         "Falacia formal"
     ], answer: 0, explanation: "Apelación a la emoción: usar miedo como argumento de venta." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Ana aprobó. Entonces Ana estudió.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Ana aprobó. Entonces Ana estudió.", options: [
         "Falacia formal (afirmación del consecuente)",
         "Silogismo válido",
         "Apelación a la mayoría",
         "Falacia informal"
     ], answer: 0, explanation: "Afirmación del consecuente: conclusión inválida sobre la causa." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Dos estudiantes copiaron, todos son deshonestos.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Dos estudiantes copiaron, todos son deshonestos.", options: [
         "Generalización apresurada",
         "Falacia formal",
         "Silogismo categórico válido",
         "Apelación a la tradición"
     ], answer: 0, explanation: "Generalización a partir de ejemplos insuficientes." },
-    { instruction: "Determine si la estructura es un silogismo válido (modus ponens).", text: "Si estudio, apruebo. Estudio. Entonces apruebo.", options: [
+    { instruction: "Determina si la estructura es un silogismo válido (modus ponens).", text: "Si estudio, apruebo. Estudio. Entonces apruebo.", options: [
         "Silogismo hipotético válido",
         "Falacia informal",
         "Apelación a la mayoría",
         "Silogismo inválido"
     ], answer: 0, explanation: "Estructura válida: modus ponens (si P→Q y P, entonces Q)." },
-    { instruction: "Determine si el silogismo disyuntivo es válido.", text: "O estudias o repruebas. No estudias. Entonces repruebas.", options: [
+    { instruction: "Determina si el silogismo disyuntivo es válido.", text: "O estudias o repruebas. No estudias. Entonces repruebas.", options: [
         "Silogismo disyuntivo válido",
         "Falacia formal",
         "Apelación a la emoción",
         "Generalización apresurada"
     ], answer: 0, explanation: "Silogismo disyuntivo válido si la disyunción es exclusiva y completa." },
-    { instruction: "Determine si el silogismo categórico es válido.", text: "Todos los estudiantes son responsables. Ana es estudiante. Por lo tanto, Ana es responsable.", options: [
+    { instruction: "Determina si el silogismo categórico es válido.", text: "Todos los estudiantes son responsables. Ana es estudiante. Por lo tanto, Ana es responsable.", options: [
         "Silogismo categórico válido",
         "Falacia informal",
         "Generalización apresurada",
         "Falacia formal"
     ], answer: 0, explanation: "Ejemplo clásico de silogismo categórico válido (sílabo directo)." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Si apruebas este curso, serás un genio.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Si apruebas este curso, serás un genio.", options: [
         "Falacia de falsa causa",
         "Apelación a la emoción",
         "Silogismo válido",
         "Generalización apresurada"
     ], answer: 0, explanation: "Falsa causa: atribuir una relación causal inexistente entre aprobar y ser genio." },
-    { instruction: "Indique el tipo de falacia presente.", text: "No hay pruebas de que los extraterrestres no existan, por lo tanto existen.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "No hay pruebas de que los extraterrestres no existan, por lo tanto existen.", options: [
         "Apelación a la ignorancia",
         "Silogismo categórico válido",
         "Falacia formal",
         "Generalización apresurada"
     ], answer: 0, explanation: "Apelación a la ignorancia: usar la falta de evidencia como prueba positiva." },
-    { instruction: "Complete la siguiente falacia (elija la opción correcta para completar).", text: "Si una persona es profesor, entonces sabe enseñar. Juan sabe enseñar….", options: [
+    { instruction: "Completa la falacia.", text: "Si una persona es profesor, entonces sabe enseñar. Juan sabe enseñar….", options: [
         "Entonces Juan es profesor.",
         "Entonces Juan no es profesor.",
         "Entonces todos los que enseñan son profesores.",
         "Entonces Juan es estudiante."
     ], answer: 0, explanation: "Afirmación del consecuente: inferir el antecedente desde el consecuente es inválido." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Los políticos son como niños: siempre necesitan que alguien los vigile.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Los políticos son como niños: siempre necesitan que alguien los vigile.", options: [
         "Falacia de falsa analogía",
         "Silogismo categórico válido",
         "Apelación a la mayoría",
         "Generalización apresurada"
     ], answer: 0, explanation: "Falsa analogía: comparar dos cosas que no son similares en aspectos relevantes." },
-    { instruction: "Complete la siguiente falacia (elija la opción correcta para completar).", text: "Si no apoyas este proyecto, significa que….", options: [
+    { instruction: "Completa la falacia.", text: "Si no apoyas este proyecto, significa que….", options: [
         "Odias el progreso.",
         "No tienes tiempo.",
         "Estás indeciso.",
         "Prefieres otro proyecto."
     ], answer: 0, explanation: "Ejemplo de falso dilema / ataque ad hominem implícito: reducir opciones y atribuir intención negativa." },
-    { instruction: "Indique el tipo de falacia presente.", text: "Nadie ha demostrado que los unicornios no existen, por lo tanto deben existir.", options: [
+    { instruction: "Indica el tipo de falacia presente.", text: "Nadie ha demostrado que los unicornios no existen, por lo tanto deben existir.", options: [
         "Apelación a la ignorancia",
         "Silogismo hipotético válido",
         "Falacia formal",
         "Generalización apresurada"
     ], answer: 0, explanation: "Apelación a la ignorancia: ausencia de evidencia no es evidencia de presencia." },
-    { instruction: "Complete la siguiente falacia (elija la opción correcta para completar).", text: "Si una persona es atleta, entonces hace ejercicio. Pedro no es atleta….", options: [
+    { instruction: "Completa la falacia.", text: "Si una persona es atleta, entonces hace ejercicio. Pedro no es atleta….", options: [
         "Entonces Pedro no hace ejercicio.",
         "Entonces Pedro hace ejercicio.",
         "Entonces Pedro es saludable.",
